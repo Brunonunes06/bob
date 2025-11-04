@@ -1,0 +1,96 @@
+body {
+    /* Define a cor fundo para o corpo da pagina  */
+    background-color: aquamarine;
+}
+
+h1 {
+    /* Centaliza o texto */
+    text-align: center;
+    /* Define a cor do texto como azul */
+    color: black;
+    /* Define o Tamanho da fonte como 60 pixels */
+    font-size: 60px;
+    /* Define a cor do fundo para elemento h1 */
+    background-color: rgb(11, 96, 234);
+}
+
+img {
+    /* Adiciona uma borda pontilhada vermelha de 3 pixels */
+    border: 3px dotted red;
+    /* Adiciona uma margem a esquerda de 841 pixels */
+    margin-left: 841px;
+    /*  Isso ativa o modelo de layout Flexbox para seus filhos diretos (neste caso, a tag <img>). */
+    display: flex;
+    /* CSS é utilizada principalmente para centralizar horizontalmente um elemento de nível de bloco dentro do seu elemento */
+    margin: auto;
+    /* Centra o texto horizontalmente dentro do elemento. */
+    text-align: center;
+}
+
+.agua-viva {
+    
+    position: relative;
+    width: 150px;
+    height: 100px;
+    background: #ff6cc4;
+    border-radius: 100px 100px 40px 40px;
+    box-shadow: inset 0 -8px 0 #e05fae;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    bottom: -20px;
+}
+
+.agua-viva::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    width: 20px;
+    height: 20px;
+    background: #ff94d0;
+    border-radius: 50%;
+    box-shadow: 50px 0 #ff94d0, 80px 10px #ff94d0;
+}
+
+.tentaculo {
+    position: absolute;
+    bottom: -40px;
+    width: 15px;
+    height: 45px;
+    background: #ff6cc4;
+    border-radius: 10px;
+}
+
+.t1 {
+    left: 20px;
+    animation: wave 2s ease-in-out infinite;
+}
+
+.t2 {
+    left: 55px;
+    animation: wave 2s ease-in-out infinite 0.2s;
+}
+
+.t3 {
+    left: 90px;
+    animation: wave 2s ease-in-out infinite 0.4s;
+}
+
+.t4 {
+    left: 125px;
+    animation: wave 2s ease-in-out infinite 0.6s;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
